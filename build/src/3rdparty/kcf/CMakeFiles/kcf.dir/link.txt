@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../../../lib/libkcf.a  CMakeFiles/kcf.dir/cn/cn_data.cpp.o CMakeFiles/kcf.dir/piotr_fhog/gradientMex.cpp.o CMakeFiles/kcf.dir/kcf.cpp.o
+/usr/bin/ranlib ../../../lib/libkcf.a
