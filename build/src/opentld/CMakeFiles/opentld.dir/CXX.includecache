@@ -177,6 +177,10 @@ ImAcq.h
 /home/madbob/Documents/OpenTLD_KCF-master/src/opentld/ImAcq.h
 Gui.h
 /home/madbob/Documents/OpenTLD_KCF-master/src/opentld/Gui.h
+OpenTLD.h
+/home/madbob/Documents/OpenTLD_KCF-master/src/opentld/OpenTLD.h
+
+/home/madbob/Documents/OpenTLD_KCF-master/src/opentld/OpenTLD.h
 
 /usr/local/include/boost/assert.hpp
 boost/config.hpp

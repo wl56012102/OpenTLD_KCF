@@ -68,7 +68,6 @@ public:
         saveDir = ".";
         threshold = 0.5;
         showForeground = 0;
-
 		showTrajectory = false;
 		trajectoryLength = 0;
 

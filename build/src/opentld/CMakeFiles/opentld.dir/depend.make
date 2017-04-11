@@ -24,6 +24,7 @@ src/opentld/CMakeFiles/opentld.dir/OpenTLD.cpp.o: ../src/opentld/main/Gui.h
 src/opentld/CMakeFiles/opentld.dir/OpenTLD.cpp.o: ../src/opentld/main/Main.h
 src/opentld/CMakeFiles/opentld.dir/OpenTLD.cpp.o: ../src/opentld/main/Settings.h
 src/opentld/CMakeFiles/opentld.dir/OpenTLD.cpp.o: ../src/opentld/OpenTLD.cpp
+src/opentld/CMakeFiles/opentld.dir/OpenTLD.cpp.o: ../src/opentld/OpenTLD.h
 src/opentld/CMakeFiles/opentld.dir/OpenTLD.cpp.o: /usr/local/include/boost/assert.hpp
 src/opentld/CMakeFiles/opentld.dir/OpenTLD.cpp.o: /usr/local/include/boost/config.hpp
 src/opentld/CMakeFiles/opentld.dir/OpenTLD.cpp.o: /usr/local/include/boost/config/compiler/borland.hpp

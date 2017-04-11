@@ -33,7 +33,7 @@
 
 using namespace tld;
 using namespace cv;
-
+extern int init_x1,init_y1,init_x2,init_y2;
 void Main::doWork()
 {
     Trajectory trajectory;
@@ -94,9 +94,8 @@ void Main::doWork()
     else if(initialBB != NULL)
     {
         Rect bb = tldArrayToRect(initialBB);
-
         printf("Starting at %d %d %d %d\n", bb.x, bb.y, bb.width, bb.height);
-
+        fflush(stdout);
         tld->selectObject(grey,cvarrToMat(img), &bb);
         skipProcessingOnce = true;
         reuseFrameOnce = true;
@@ -171,7 +170,18 @@ void Main::doWork()
             {
                 CvScalar rectangleColor = (confident) ? blue : yellow;
                 cvRectangle(img, tld->currBB->tl(), tld->currBB->br(), rectangleColor, 8, 8, 0);
-                printf("%d %.2d %.2d %.2d %.2d %f\n", imAcq->currentFrame - 1, tld->currBB->tl().x, tld->currBB->tl().y, tld->currBB->width, tld->currBB->height, tld->currConf);
+
+                int ser_run,ser_lr;
+                if(abs(init_x1-init_x2)>tld->currBB->width){
+                    ser_run=1;
+                }
+                else{
+                    ser_run=0;
+                }
+                if()
+
+                printf("Frame:%d tl.x:%.2d tl.y:%.2d width:%.2d height:%.2d %f fx:%d\r", imAcq->currentFrame - 1, tld->currBB->tl().x, tld->currBB->tl().y, tld->currBB->width, tld->currBB->height, tld->currConf,ser_put);
+                fflush(stdout);
 
                 if(showTrajectory)
                 {

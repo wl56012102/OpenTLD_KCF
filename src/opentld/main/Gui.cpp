@@ -23,6 +23,7 @@
  *  Created on: Oct 18, 2011
  *      Author: clemensk
  */
+ //#include "../OpenTLD.h"
 
 #include "Gui.h"
 
@@ -31,7 +32,7 @@
 #include <string>
 
 using std::string;
-
+extern int init_x1,init_y1,init_x2,init_y2;
 namespace tld
 {
 
@@ -70,15 +71,22 @@ static CvFont font;
 static IplImage *img0;
 static IplImage *img1;
 static CvPoint point;
+static CvPoint point1;
 static CvRect *bb;
 static int drag = 0;
+
+
 
 static void mouseHandler(int event, int x, int y, int flags, void *param)
 {
     /* user press left button */
     if(event == CV_EVENT_LBUTTONDOWN && !drag)
     {
+        
         point = cvPoint(x, y);
+        printf("%d %d\n",point.x,point.y);
+        init_x1=point.x;
+        init_y1=point.y;
         drag = 1;
     }
 
@@ -96,6 +104,10 @@ static void mouseHandler(int event, int x, int y, int flags, void *param)
     /* user release left button */
     if(event == CV_EVENT_LBUTTONUP && drag)
     {
+        point1 = cvPoint(x,y);
+        init_x2=point1.x;
+        init_y2=point1.y;
+        printf("%d %d\n",point1.x,point1.y);
         *bb = cvRect(point.x, point.y, x - point.x, y - point.y);
         drag = 0;
     }
